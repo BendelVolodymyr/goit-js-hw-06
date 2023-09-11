@@ -19,7 +19,7 @@ const images = [
 const newImages = images.map((element) =>
   `<li class="gallery__list"><img src="${element.url}" alt="${element.alt}" width="260" /></li>`).join(""); 
 const list = document.querySelector('ul.gallery');
-list.insertAdjacentHTML("beforeend", newImages);
+list.insertAdjacentHTML('beforeend', newImages);
 list.style.cssText = `
   list-style: none;
 

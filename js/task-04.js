@@ -1,5 +1,5 @@
 // result in scoreboard
-const span = document.querySelector("span#value");
+const span = document.querySelector('span#value');
 
 let counterValue = 0;
 
@@ -23,8 +23,8 @@ const buttonIncrement = document.querySelector('button[data-action="increment"]'
 
 // event call
 
-buttonDecrement.addEventListener("click", minus);
-buttonIncrement.addEventListener("click", plus);
+buttonDecrement.addEventListener('click', minus);
+buttonIncrement.addEventListener('click', plus);
 
 // style
 buttonDecrement.style.cssText = `
