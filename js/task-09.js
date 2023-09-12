@@ -14,5 +14,3 @@ function getRandomHexColor() {
 }
 
 button.addEventListener('click', random);
-
-console.log(getRandomHexColor())
