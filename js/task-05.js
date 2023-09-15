@@ -3,7 +3,8 @@ const textInput = document.querySelector('#name-input');
 const outPut = document.querySelector('#name-output')
 // result input
 textInput.addEventListener('input', (even) => {
-    outPut.textContent = textInput.value !== "" ? even.currentTarget.value : 'Anonymous';
+    const valueInput = even.currentTarget.value.trim();
+    outPut.textContent = valueInput !== "" ? valueInput: 'Anonymous';
 })
 // style
 const style = document.querySelector('body');

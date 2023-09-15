@@ -12,14 +12,7 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
-
-
-
-
-const newImages = images.map((element) =>
-  `<li class="gallery__list"><img src="${element.url}" alt="${element.alt}" width="260" /></li>`).join(""); 
 const list = document.querySelector('ul.gallery');
-list.insertAdjacentHTML('beforeend', newImages);
 list.style.cssText = `
   list-style: none;
 
@@ -35,3 +28,21 @@ filter: grayscale(64%) sepia(11%) contrast(104%) invert(14%);
 
   background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(70,176,219,0.9893207282913166) 35%, rgba(0,212,255,1) 100%);
 `;
+
+
+let elementsImages = [];
+
+const newImmages = (img) => {
+  img.map(({url, alt }) => {
+    elementsImages.push(`<li class="gallery__list"><img src="${url}" alt="${alt}" width="260" /></li>`)
+  })
+  list.insertAdjacentHTML('beforeend', elementsImages);
+}
+
+
+newImmages(images);
+// const newImages = images.map((element) =>
+// `<li class="gallery__list"><img src="${element.url}" alt="${element.alt}" width="260" /></li>`).join(""); 
+
+// list.insertAdjacentHTML('beforeend', newImages);
+

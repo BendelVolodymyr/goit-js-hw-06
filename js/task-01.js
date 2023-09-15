@@ -1,11 +1,14 @@
-const list = document.querySelectorAll('.item');
-const numberCategories = list.forEach((element, index, array) => {
-    const numberChildren = array.length;
-    console.dir(`Number of categories: ${numberChildren}`);
-});
-const filterCategories = list.forEach((element) => {
-    const nameElement = element.firstElementChild.textContent;
-    const lengthElement = element.lastElementChild.children.length;
-    console.dir(`Category: ${nameElement}`);
-    console.dir(`Elements: ${lengthElement}`);
+const allCategories = document.querySelector('#categories');
+const lengthCategorries = allCategories.children.length;
+console.log(`Number of categories: ${lengthCategorries}`);
+
+
+const items = document.querySelectorAll(".item");
+
+const total = items.forEach((element) => {
+    const categoryName = element.firstElementChild.textContent;
+    const categoryElement = element.lastElementChild.children.length;
+    console.log(`Category: ${categoryName}`);
+    console.dir(`Elements: ${categoryElement}`);  
+    
 });

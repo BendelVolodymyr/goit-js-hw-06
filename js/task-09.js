@@ -3,8 +3,9 @@ const button = document.querySelector('.change-color');
 const nameColor = document.querySelector('span.color');
 
 const random = () => {
-  bodyStyle.style.cssText = ` background-color: ${getRandomHexColor()}`;
-  nameColor.innerHTML = getRandomHexColor();
+  const randomColor = getRandomHexColor();
+  bodyStyle.style.cssText = ` background-color: ${randomColor}`;
+  nameColor.innerHTML = randomColor;
 }
 
 function getRandomHexColor() {
